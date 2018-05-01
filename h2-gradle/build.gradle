@@ -1,0 +1,23 @@
+def version= "1.4.197"
+
+repositories {
+    mavenCentral()
+}
+configurations {
+    h2
+}
+
+dependencies {
+    h2 "com.h2database:h2:$version"
+}
+
+task downloadh2(type: Copy) {
+    from configurations.h2
+    into "$buildDir/h2"
+}
+
+
+task runh2(type:JavaExec) {
+   classpath "$buildDir/h2/h2-${version}.jar"
+   main = "org.h2.tools.Server"  
+}
