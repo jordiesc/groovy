@@ -1,0 +1,54 @@
+= Source highlight lines
+:source-highlighter: highlightjs
+
+== HOLA
+caracola esto es un test
+
+* UNO
+* DOS
+* TRES
+
+[source,ruby,linenums,highlight='7-9']
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+
+<1> Library import
+<2> URL mapping
+<3> HTTP response body
+
+[source,java]
+----
+interface MyInterface
+{
+   /* All the methods are public abstract by default
+    * As you see they have no body
+    */
+   public void method1();
+   public void method2();
+}
+----
+
+
+== Tabular data
+
+[options="header,footer",caption=]
+.Table Caption
+|===
+|Table Heading 1 | Table Heading 2 | Table Heading 3 | Table Heading 4 | Table Heading 5
+|Table Cell 1 | Table Cell 2 | Table Cell 3 | Table Cell 4 | Table Cell 5
+|Table Cell 1 | Table Cell 2 | Table Cell 3 | Table Cell 4 | Table Cell 5
+|Table Cell 1 | Table Cell 2 | Table Cell 3 | Table Cell 4 | Table Cell 5
+|Table Cell 1 | Table Cell 2 | Table Cell 3 | Table Cell 4 | Table Cell 5
+|Table Footer 1 | Table Footer 2 | Table Footer 3 | Table Footer 4 | Table Footer 5
+|===
+
+
+=== Images
+
+.Here is a caption for this image.
+image::resources/picture.jpg[]
