@@ -1,0 +1,35 @@
+== comand line usage with Execurtor.groovy
+
+here usage of Executor.groovy samples
+[source,bash]
+----
+jordi@LAPTOP-ELFAQNCG MINGW64 ~
+$ groovy Executor.groovy -h
+Printing arguments
+-h
+usage: Executor.groovy -[h] [crear] [borrar]
+ -h,--help   Show usage information
+
+jordi@LAPTOP-ELFAQNCG MINGW64 ~
+$ groovy Executor.groovy crear
+Printing arguments
+crear
+[crear]
+jordi@LAPTOP-ELFAQNCG MINGW64 ~
+$ groovy Executor.groovy borrar
+Printing arguments
+borrar
+[borrar]
+jordi@LAPTOP-ELFAQNCG MINGW64 ~
+$ groovy Executor.groovy ele
+Printing arguments
+ele
+[ele]
+jordi@LAPTOP-ELFAQNCG MINGW64 ~
+$ groovy Executor.groovy crear borrar
+Printing arguments
+crear
+borrar
+[crear, borrar]
+
+----
