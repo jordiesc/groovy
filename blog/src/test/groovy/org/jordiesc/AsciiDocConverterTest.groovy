@@ -11,16 +11,19 @@ import static org.asciidoctor.OptionsBuilder.options;
 import org.asciidoctor.Options;
 import org.asciidoctor.SafeMode;
 import org.asciidoctor.Attributes;
+import static org.junit.jupiter.api.Assertions.assertEquals
 
-import spock.lang.*
+import org.junit.jupiter.api.Test
 
-class AsciiDocConverterTest extends Specification {
+
+class AsciiDocConverterTest  {
 	
 		/**
 		 * write basic block html
 		 * @return
 		 */
-		def "testSimplehtmlBlock" (){
+		@Test
+		void "testSimplehtmlBlock" (){
 			given:
 			print "hola caracola test"
 			
@@ -34,8 +37,8 @@ class AsciiDocConverterTest extends Specification {
 			
 			print result
 		}
-		
-		def "testfullhmtml" () {
+		@Test
+		void "testfullhmtml" () {
 			given:
 /*
 						def options = OptionsBuilder.options()
