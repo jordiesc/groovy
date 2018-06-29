@@ -28,17 +28,21 @@ class Init {
 		final FileTreeBuilder blog = new FileTreeBuilder(blogDir)
 		
 		
-		blog.src {
-		   main {
-			  groovy {
+		blog {
+		   post {
 				 'Foo.groovy'('println "Hello"')
-			  }
 		   }
-		   test {
-			  groovy {
+		   articles {
+			  
 				 'FooTest.groovy'('class FooTest extends GroovyTestCase {}')
-			  }
 		   }
+		      
+		   site {
+			   'Foo.groovy'
+			   'index.html'
+			   'rss.xml'
+		   }
+		   
 		}
 		
 		
