@@ -1,0 +1,8 @@
+////---
+{"name":"programing","description":"json de prueba","date":"2016-02-02","tags":["java","groovy"]}
+---////
+
+= HOlA
+. uno
+. dos
+. tres
