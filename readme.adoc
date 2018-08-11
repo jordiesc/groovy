@@ -1,3 +1,4 @@
 === Boundle of Java Projects it includes.
 
 * h2-gradle. Script which download h2 and run it
+* sqlite-gradle. Script which create Sqlite in gradle

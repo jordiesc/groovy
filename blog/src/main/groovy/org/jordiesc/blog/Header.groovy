@@ -5,6 +5,18 @@ import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import groovy.util.logging.Slf4j
 
+/**
+ * regular expresion
+ * @author jordi
+ * \/\/\/\/---\n*.+\n*---\/\/\/\/
+ * 
+ * it matchs with 
+ * 
+ * ////---
+{"name":"programing","description":"json de prueba","date":"2016-02-02","tags":["java","groovy"]}
+---////
+ *
+ */
 @Slf4j
 class Header {
 	def name

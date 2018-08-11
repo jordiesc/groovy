@@ -1,0 +1,50 @@
+import groovy.sql.Sql 
+// more information at http://docs.groovy-lang.org/latest/html/api/groovy/sql/Sql.html
+
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+repositories { mavenCentral() }
+configurations { driver }
+
+dependencies { driver 'org.xerial:sqlite-jdbc:3.7.2' }
+
+URLClassLoader loader = GroovyObject.class.classLoader
+configurations.driver.each {File file ->
+    loader.addURL(file.toURL())
+}
+
+task jdbcSample  {
+    doFirst {
+
+    
+    
+    def sql = Sql.newInstance( 'jdbc:sqlite:test.db' // JDBC connection string
+            , '' // username
+            , '' // password
+            , 'org.sqlite.JDBC' ) // driver class
+
+    sql.execute '''\
+CREATE TABLE IF NOT EXISTS task(
+id int primary key
+,name varchar
+)
+'''
+
+    sql.execute '''\
+INSERT OR IGNORE INTO task VALUES(
+1
+,'test'
+)
+'''
+
+    sql.eachRow( 'select * from pertask' ) {
+        int id = it.id
+        println "id:$id name:$it.name"
+    }
+
+
+    sql.close()
+    }
+}
