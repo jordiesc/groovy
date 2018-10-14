@@ -1,0 +1,14 @@
+== Testing With Gradle
+
+Gradle has Junit out of the box, the reporting is not still so fancy as maven but it has the same functionality
+
+== Gradle JUnit 5
+
+[source,groovy]
+----
+testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')
+testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
+testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
+----
+
+to run the test just execute `gradle test` but if you wish and specific test ie the whole class is still posssible with `gradle test --tests org.jordiesc.BlogTest` 
